@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Presence() {
   return (
-    <section className="bg-[#F4ECE3] py-20 lg:py-20">
+    <section className="bg-[#F4ECE3] py-12 lg:py-20">
       <div className="max-w-[1320px] mx-auto px-4 lg:px-6">
         <div
           className="

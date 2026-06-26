@@ -189,7 +189,7 @@ const productCard = {
 
 export default function SacredChapters() {
   return (
-    <section className="py-24 bg-[#F8F3EE]">
+    <section className="py-12 lg:py-24 bg-[#F8F3EE]">
       <div className="max-w-[1320px] mx-auto px-5">
         {/* Header */}
 

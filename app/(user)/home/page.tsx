@@ -2,7 +2,7 @@ import CuratedProducts from "@/components/curated/curatedProducts";
 import Artisans from "@/components/home/artisans";
 import Hero from "@/components/home/hero";
 import Legacy from "@/components/home/legacy";
-import Newsletter from "@/components/home/newsletter";
+import HomeNewsletter from "@/components/home/homeNewsletter";
 import Presence from "@/components/home/presence";
 import RitualKits from "@/components/home/ritualKits";
 import ShantiSamagri from "@/components/home/shantiSamagri";
@@ -20,7 +20,7 @@ export default function Homepage() {
       <Artisans />
       <Presence />
       <Legacy />
-      <Newsletter />
+      <HomeNewsletter />
       <Testimonials />
     </>
   );

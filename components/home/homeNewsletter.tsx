@@ -1,6 +1,6 @@
 "use client";
 
-export default function Newsletter() {
+export default function HomeNewsletter() {
   return (
     <section className="bg-[#7A0008] py-20 lg:py-20">
       <div className="max-w-[900px] mx-auto px-6 text-center">

@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function ShantiSamagri() {
   return (
-    <section className="bg-[#F4ECE3] py-20 lg:py-20 overflow-hidden">
+    <section className="bg-[#F4ECE3] py-12 lg:py-20 overflow-hidden">
       <div className="max-w-[1320px] mx-auto px-4 lg:px-6">
         <div
           className="

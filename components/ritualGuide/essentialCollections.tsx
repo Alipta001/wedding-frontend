@@ -44,7 +44,7 @@ const collections = [
 
 export default function EssentialCollections() {
   return (
-    <section className="bg-[#F8F3EE] py-20 lg:py-28 overflow-hidden">
+    <section className="bg-[#F8F3EE] py-12 lg:py-24 overflow-hidden">
       <div className="max-w-[1320px] mx-auto px-5 lg:px-8">
         {/* Header */}
 

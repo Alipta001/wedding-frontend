@@ -1,20 +1,17 @@
-
-
 import Image from "next/image";
 import Link from "next/link";
 
 interface CuratedCardProps {
   product: {
-    slug: string;
+    id: number;
     name: string;
     image: string;
-    price: number;
+    price: string;
+    category: string;
   };
 }
 
-export default function CuratedCard({
-  product,
-}: CuratedCardProps) {
+export default function CuratedCard({ product }: CuratedCardProps) {
   return (
     <article
       className="
@@ -45,42 +42,18 @@ export default function CuratedCard({
       </div>
 
       <div className="p-6">
-        <h3
-          className="
-            text-[#5B060C]
-            text-2xl
-            font-serif
-          "
-        >
+        <h3 className="text-[#5B060C] text-2xl font-serif">
           {product.name}
         </h3>
 
-        <div
-          className="
-            mt-4
-            flex
-            items-center
-            justify-between
-          "
-        >
-          <span
-            className="
-              text-[#A68445]
-              text-lg
-              font-medium
-            "
-          >
-            ₹{product.price.toLocaleString()}
+        <div className="mt-4 flex items-center justify-between">
+          <span className="text-[#A68445] text-lg font-medium">
+            {product.price}
           </span>
 
           <Link
-            href={`/products/${product.slug}`}
-            className="
-              text-[#722020]
-              font-medium
-              hover:text-[#A68445]
-              transition
-            "
+            href={`/products/${product.id}`}
+            className="text-[#722020] font-medium hover:text-[#A68445] transition"
           >
             View →
           </Link>

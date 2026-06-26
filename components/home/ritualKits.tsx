@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function RitualKits() {
   return (
-    <section className="py-20 lg:py-20 bg-[#FAF6F0]">
+    <section className="py-12 lg:py-20 bg-[#FAF6F0]">
       <div className="max-w-[1320px] mx-auto px-4 lg:px-6">
 
         {/* Section Header */}
