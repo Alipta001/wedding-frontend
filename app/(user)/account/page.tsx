@@ -1,3 +1,4 @@
+
 // import AccountBanner from "@/components/account/accountBanner";
 // import AccountBannerHeader from "@/components/account/accountBannerHeader";
 // import AccountOrders from "@/components/account/accountOrders";
@@ -9,24 +10,43 @@
 //   return (
 //     <section className="bg-[#F6F1EC] min-h-screen py-12">
 //       <div className="max-w-[1320px] mx-auto px-5">
-//         <AccountHeader />
-//         <div className="grid grid-cols-[260px_1fr] gap-10">
-//           <AccountSidebar />
+        
+//         {/* Page Header */}
+//         <div className="mb-8">
+//           <AccountHeader />
+//         </div>
 
-//           <div className="bg-white p-10 rounded-none">
+//         {/* Dashboard Layout */}
+//         <div className="grid lg:grid-cols-[260px_1fr] gap-10">
+          
+//           {/* Sidebar */}
+//           <div>
+//             <AccountSidebar />
+//           </div>
+
+//           {/* Content */}
+//           <div className="bg-white p-10">
 //             <AccountBannerHeader />
 
-//             <AccountStatsCards />
+//             <div className="mt-8">
+//               <AccountStatsCards />
+//             </div>
 
-//             <AccountOrders />
+//             <div className="mt-10">
+//               <AccountOrders />
+//             </div>
 
-//             <AccountBanner />
+//             <div className="mt-10">
+//               <AccountBanner />
+//             </div>
 //           </div>
 //         </div>
 //       </div>
 //     </section>
 //   );
 // }
+
+
 
 import AccountBanner from "@/components/account/accountBanner";
 import AccountBannerHeader from "@/components/account/accountBannerHeader";
@@ -37,7 +57,7 @@ import AccountHeader from "@/components/account/accountHeader";
 
 export default function AccountPage() {
   return (
-    <section className="bg-[#F6F1EC] min-h-screen py-12">
+    <section className="bg-[#F6F1EC] min-h-screen py-12 overflow-x-hidden">
       <div className="max-w-[1320px] mx-auto px-5">
         
         {/* Page Header */}
@@ -45,16 +65,16 @@ export default function AccountPage() {
           <AccountHeader />
         </div>
 
-        {/* Dashboard Layout */}
-        <div className="grid lg:grid-cols-[260px_1fr] gap-10">
+        {/* Dashboard Layout (FIXED GRID) */}
+        <div className="grid grid-cols-1 lg:grid-cols-[260px_minmax(0,1fr)] gap-10">
           
           {/* Sidebar */}
-          <div>
+          <div className="min-w-0">
             <AccountSidebar />
           </div>
 
           {/* Content */}
-          <div className="bg-white p-10">
+          <div className="bg-white p-6 md:p-10 min-w-0">
             <AccountBannerHeader />
 
             <div className="mt-8">
@@ -69,6 +89,7 @@ export default function AccountPage() {
               <AccountBanner />
             </div>
           </div>
+
         </div>
       </div>
     </section>

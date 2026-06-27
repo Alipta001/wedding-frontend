@@ -201,11 +201,115 @@
 // }
 
 
+// "use client";
+
+// import Link from "next/link";
+// import { usePathname } from "next/navigation";
+
+// import {
+//   LayoutGrid,
+//   Package,
+//   Heart,
+//   MapPin,
+//   Download,
+//   Settings,
+//   LogOut,
+// } from "lucide-react";
+
+// const menu = [
+//   { icon: LayoutGrid, label: "Overview", href: "/account" },
+//   { icon: Package, label: "Orders", href: "/orders" },
+//   { icon: Heart, label: "Wishlist", href: "/wishlist" },
+//   { icon: MapPin, label: "Addresses", href: "/address" },
+//   { icon: Download, label: "Downloads", href: "/downloads" },
+// ];
+
+// export default function AccountSidebar() {
+//   const pathname = usePathname();
+
+//   return (
+//     <aside className="w-full">
+//       {/* MENU GRID */}
+//       <div className="grid grid-cols-2 md:grid-cols-1 gap-2">
+//         {menu.map((item) => {
+//           const isActive = pathname === item.href;
+
+//           return (
+//             <Link
+//               key={item.label}
+//               href={item.href}
+//               className={`
+//                 flex items-center gap-3 md:gap-4
+//                 px-4 md:px-5 py-3 md:py-4
+//                 rounded-2xl
+//                 transition-all duration-200
+
+//                 ${
+//                   isActive
+//                     ? "bg-[#8D1D1D] text-white shadow-md"
+//                     : "text-[#5E4A47] hover:bg-white"
+//                 }
+//               `}
+//             >
+//               <item.icon size={18} />
+//               <span className="text-sm md:text-base">
+//                 {item.label}
+//               </span>
+//             </Link>
+//           );
+//         })}
+//       </div>
+
+//       {/* FOOTER ACTIONS */}
+//       <div className="mt-8 md:mt-10 border-t border-[#E8DDD3] pt-6 md:pt-8">
+//         <div className="grid grid-cols-2 md:grid-cols-1 gap-2">
+//           <Link
+//             href="/settings"
+//             className={`
+//               flex items-center gap-3 md:gap-4
+//               px-4 md:px-5 py-3 md:py-4
+//               rounded-2xl
+//               transition-all duration-200
+
+//               ${
+//                 pathname === "/settings"
+//                   ? "bg-[#8D1D1D] text-white shadow-md"
+//                   : "text-[#5E4A47] hover:bg-white"
+//               }
+//             `}
+//           >
+//             <Settings size={18} />
+//             <span className="text-sm md:text-base">
+//               Settings
+//             </span>
+//           </Link>
+
+//           <button
+//             className="
+//               flex items-center gap-3 md:gap-4
+//               px-4 md:px-5 py-3 md:py-4
+//               text-[#D23B31]
+//               hover:bg-white
+//               rounded-2xl
+//               transition-all duration-200
+//               w-full
+//             "
+//           >
+//             <LogOut size={18} />
+//             <span className="text-sm md:text-base">
+//               Logout
+//             </span>
+//           </button>
+//         </div>
+//       </div>
+//     </aside>
+//   );
+// }
+
 "use client";
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-
 import {
   LayoutGrid,
   Package,
@@ -228,9 +332,20 @@ export default function AccountSidebar() {
   const pathname = usePathname();
 
   return (
-    <aside className="w-full">
-      {/* MENU GRID */}
-      <div className="grid grid-cols-2 md:grid-cols-1 gap-2">
+    <aside className="w-full min-w-0 overflow-hidden">
+      {/* MAIN MENU */}
+      <div
+        className="
+          flex md:grid md:grid-cols-1
+          gap-2
+
+          overflow-x-auto md:overflow-visible
+          max-w-full
+          pb-2 md:pb-0
+
+          scrollbar-hide
+        "
+      >
         {menu.map((item) => {
           const isActive = pathname === item.href;
 
@@ -240,14 +355,19 @@ export default function AccountSidebar() {
               href={item.href}
               className={`
                 flex items-center gap-3 md:gap-4
+
                 px-4 md:px-5 py-3 md:py-4
                 rounded-2xl
+
                 transition-all duration-200
+
+                whitespace-nowrap
+                flex-shrink-0 md:flex-shrink
 
                 ${
                   isActive
                     ? "bg-[#8D1D1D] text-white shadow-md"
-                    : "text-[#5E4A47] hover:bg-white"
+                    : "text-[#5E4A47] bg-white/0 hover:bg-white"
                 }
               `}
             >
@@ -263,6 +383,8 @@ export default function AccountSidebar() {
       {/* FOOTER ACTIONS */}
       <div className="mt-8 md:mt-10 border-t border-[#E8DDD3] pt-6 md:pt-8">
         <div className="grid grid-cols-2 md:grid-cols-1 gap-2">
+          
+          {/* SETTINGS */}
           <Link
             href="/settings"
             className={`
@@ -279,11 +401,10 @@ export default function AccountSidebar() {
             `}
           >
             <Settings size={18} />
-            <span className="text-sm md:text-base">
-              Settings
-            </span>
+            <span className="text-sm md:text-base">Settings</span>
           </Link>
 
+          {/* LOGOUT */}
           <button
             className="
               flex items-center gap-3 md:gap-4
@@ -296,9 +417,7 @@ export default function AccountSidebar() {
             "
           >
             <LogOut size={18} />
-            <span className="text-sm md:text-base">
-              Logout
-            </span>
+            <span className="text-sm md:text-base">Logout</span>
           </button>
         </div>
       </div>
