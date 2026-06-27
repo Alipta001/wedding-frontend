@@ -377,10 +377,6 @@ export default function RitualGuideHero() {
               DESKTOP IMAGE
           ========================== */}
 
-          {/* ==========================
-    DESKTOP IMAGE
-========================== */}
-
 <div className="hidden lg:flex relative justify-end">
   {/* Glow */}
 

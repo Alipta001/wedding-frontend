@@ -196,7 +196,7 @@ export default function ShantiSamagri() {
               "
             >
               <Link
-                href="#"
+                href="/shop"
                 className="
                   bg-[#722020]
                   text-white

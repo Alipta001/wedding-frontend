@@ -568,7 +568,7 @@ export default function Hero() {
 
             <div className="flex flex-wrap gap-4 mt-10">
               <Link
-                href="#"
+                href="/shop"
                 className="
                   bg-[#7A1D22]
                   text-white
@@ -587,7 +587,7 @@ export default function Hero() {
               </Link>
 
               <Link
-                href="#"
+                href="/artists"
                 className="
                   border
                   border-[#D5C1A0]

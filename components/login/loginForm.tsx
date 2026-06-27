@@ -577,12 +577,10 @@ console.log(data);
 
 return (
 <div
-className="
-w-full
-max-w-md
-mx-auto
-
-```
+  className="
+    w-full
+    max-w-full
+    mx-auto
     px-5
     sm:px-8
   "

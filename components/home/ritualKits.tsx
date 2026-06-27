@@ -114,7 +114,7 @@ export default function RitualKits() {
               </p>
 
               <Link
-                href="#"
+                href="/shop"
                 className="
                   inline-flex
                   mt-8
